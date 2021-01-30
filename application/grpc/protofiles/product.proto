@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package github.com.codeedu.imersaogrpc;
+
+option go_package = "protofiles;pb";
+
+message Empty {};
+message Product {
+    string name = 1;
+}
+
+message ProductResult {
+    string id = 1;
+    string name = 2;
+}
+
+service ProductService {
+    rpc CreateProduct(Product) returns (ProductResult) {};
+    rpc List(Empty) returns (stream ProductResult) {};
+}

@@ -1,0 +1,12 @@
+GET http://localhost:8080/products
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/products
+Accept: application/json
+Content-Type: application/json
+Cache-Control: no-cache
+
+{"name":"Boneco REST Peludo"}
